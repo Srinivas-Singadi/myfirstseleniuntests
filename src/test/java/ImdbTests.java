@@ -6,6 +6,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class ImdbTests {
@@ -15,7 +16,7 @@ public class ImdbTests {
   @Before
   public void setUp() throws Exception {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shree\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
-    driver = new ChromeDriver();
+    driver = new HtmlUnitDriver();
     baseUrl = "http://www.imdb.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
